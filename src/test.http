@@ -1,0 +1,52 @@
+POST http://localhost:3007/login
+Content-Type: application/json
+
+{
+    "email":"jeevan@gmail.com",
+    "password":"jeevan@123"
+}
+
+###
+POST http://localhost:3007/signup
+Content-Type: application/json
+
+{
+    "name":"Jeevan",
+    "email":"jeevan2@gmail.com",
+    "password":"jeevan@123"
+}
+
+###
+GET http://localhost:3007
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdmFuaUBnbWFpbC5jb20iLCJpYXQiOjE2OTQxNDc2OTh9.C-TWSqWVeNn2zsZQ2-FZvbHNj3NYWCc_OVP73mPvbNI
+
+###
+GET http://localhost:3007/my-blogs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdmFuaUBnbWFpbC5jb20iLCJpYXQiOjE2OTQxNDc2OTh9.C-TWSqWVeNn2zsZQ2-FZvbHNj3NYWCc_OVP73mPvbNI
+
+
+###
+POST http://localhost:3007/blog
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplZXZhbkBnbWFpbC5jb20iLCJpYXQiOjE2OTQxNDgxNjF9.yjRSfFId73FKiAT3CJ4qBrVVvnMoK17jGy84rXbfp_o
+Content-Type:application/json
+
+{
+    "title":"This is Second Jeevan Blog",
+    "description":"My First Blog Description",
+    "image":"image.jpg",
+    "author":"64c6059c7e7e118304de0036"
+}
+
+###
+PUT http://localhost:3007/blog/64f8231d92ebe951cddfde8a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdmFuaUBnbWFpbC5jb20iLCJpYXQiOjE2OTQxNDc2OTh9.C-TWSqWVeNn2zsZQ2-FZvbHNj3NYWCc_OVP73mPvbNI
+Content-Type: application/json
+
+{
+    "title":"first Blog Updated",
+    "description":"First Blog Description Updated"
+}
+
+### 
+DELETE http://localhost:3007/blog/lll
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdmFuaUBnbWFpbC5jb20iLCJpYXQiOjE2OTQxNDc2OTh9.C-TWSqWVeNn2zsZQ2-FZvbHNj3NYWCc_OVP73mPvbNI
